@@ -1,0 +1,108 @@
+Iteracion 14 1 Intercambiando 284 517 
+
+condition =
+
+     0
+
+
+i =
+
+   600
+
+
+j =
+
+   600
+
+Iteracion 15 Ctest =9947 Cmin= 0.32768 Cplus=0.32768 
+
+elapsed_time =
+
+   18.7970
+
+Iteracion 16 Ctest =9947 Cmin= 0.65536 Cplus=0.65536 
+
+elapsed_time =
+
+   17.0240
+
+Iteracion 17 Ctest =9947 Cmin= 1.31072 Cplus=1.31072 
+
+elapsed_time =
+
+   16.9740
+
+Iteracion 18 Ctest =9947 Cmin= 2.62144 Cplus=2.62144 
+
+elapsed_time =
+
+   17.0450
+
+Iteracion 19 Ctest =9947 Cmin= 5.24288 Cplus=5.24288 
+
+elapsed_time =
+
+   18.7570
+
+Iteracion 20 Ctest =9947 Cmin= 10.4858 Cplus=10.4858 
+
+elapsed_time =
+
+   20.4390
+
+Iteracion 21 Ctest =9947 Cmin= 20.9715 Cplus=20.9715 
+
+elapsed_time =
+
+   20.5400
+
+Iteracion 22 Ctest =9947 Cmin= 41.943 Cplus=41.943 
+
+elapsed_time =
+
+   20.5200
+
+Iteracion 23 Ctest =9947 Cmin= 83.8861 Cplus=83.8861 
+
+elapsed_time =
+
+   20.5400
+
+Iteracion 24 Ctest =9947 Cmin= 167.772 Cplus=167.772 
+
+elapsed_time =
+
+   20.3790
+
+Iteracion 25 Ctest =9947 Cmin= 335.544 Cplus=335.544 
+
+elapsed_time =
+
+   20.3900
+
+Iteracion 26 Ctest =9947 Cmin= 671.089 Cplus=671.089 
+
+elapsed_time =
+
+   23.4240
+
+Iteracion 27 Ctest =9947 Cmin= 1342.18 Cplus=1342.18 
+
+elapsed_time =
+
+   22.2730
+
+Iteracion 28 Ctest =9947 Cmin= 2684.35 Cplus=2684.35 
+
+elapsed_time =
+
+   24.0550
+
+Iteracion 29 Ctest =9947 Cmin= 5368.71 Cplus=5368.71 
+
+elapsed_time =
+
+   42.7620
+
+Iteracion 30 Ctest =9947 Cmin= 9947 Cplus=9947 
+The training needed 2.303962e+003 seconds.

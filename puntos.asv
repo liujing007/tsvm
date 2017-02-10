@@ -1,0 +1,32 @@
+function sol=classification_dataset(N,type)
+
+load probe.mat
+
+              
+idx=find(Y==1);
+idx1=find(Y==-1);
+idxtest=find(Ytest==1);
+idxtest1=find(Ytest==-1);
+plot(X(1,idx),X(2,idx),'go',X(1,idx1),X(2,idx1),'b+',Xtest(1,idxtest),Xtest(2,idxtest),'ro',Xtest(1,idxtest1),Xtest(2,idxtest1),'k+');  %Inserted to solve the absence of gplotmatrix
+title('First classification with SVM');
+grid on;
+       
+t=cputime;
+
+              
+solTsvm=cosa(X,Y,Xtest,Ytest,C,Ctest,numPlus,epsilon,type_nummer,par);
+    
+
+       
+time=cputime-t;
+fprintf('The training needed %d',time),fprintf(' seconds.\n');
+
+
+
+%from TSVM
+% tsvmalpha=solTsvm{1,1};
+% tsvmbias=solTsvm{1,2};
+% tsvmw=solTsvm{1,3};
+% tsvmeslack=solTsvm{1,4};
+% tsvmeslack2=solTsvm{1,5};
+% tsvmtest=solTsvm{1,6};

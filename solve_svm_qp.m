@@ -1,0 +1,143 @@
+function solution=solve_svm_qp(X,Y,Xtest,Ytest,C,Cminus,Cplus,epsilon,type_nummer,par)
+
+
+Notest = isempty(Xtest);%if we are solving with the traditional SVM without test assignments..
+if Notest
+   Xtotal =X;
+   Ytotal =Y;
+else
+    Xtotal = [X Xtest];
+    Ytotal = [Y; Ytest];
+end
+%This is the algorithm of SVM
+tekstuitvoer=0;%imprimir
+if tekstuitvoer
+   fprintf('Training of the SVM...\n')
+   fprintf('type: %s \n',type)
+   fprintf('de kost C %d \n',C)
+   switch type
+   case 'gaussian_rbf'
+      fprintf('sigma= %d \n',par1)
+   case 'exponential_rbf'
+      fprintf('sigma= %d \n',par1)
+   case 'polynomial'
+      fprintf('degree of polynomial= %d \n',par1)
+   end
+end
+M=size(Xtest,2);%Capturing the lenght of the Training set  
+N=size(X,2);
+Aeq=Ytotal';
+%beq=[0];
+[na,nalphas] = size(Aeq);
+
+beq=zeros(na,1);%For the OperaQP
+lb=zeros(N+M,1);
+if C==inf
+   C=[];
+else
+   ub=ones(M+N,1);
+   ub(1:N,:)=C * ub(1:N,:);
+   if ~Notest
+      idx1=find(Ytest ==-1);
+     idx2=find(Ytest ==1); 
+     idx1=idx1+N;
+     idx2=idx2+N;
+     ub(idx1,:)=Cminus*ub(idx1,:);
+     ub(idx2,:)=Cplus*ub(idx2,:);
+    end
+end
+Aieq = [-eye(N+M);eye(N+M)];
+bieq = [lb;-ub];
+f=-1*ones(N+M,1);
+
+% Bepaling H:
+K=full(kernel2(Xtotal,[],type_nummer,par));
+H=diag(Ytotal)*K*diag(Ytotal);
+
+% subplot(1,2,1),contourf(K)
+% colorbar
+% title('Strucuur in K');
+
+options=optimset('MaxIter',1000,'LargeScale','off','Display','iter');
+tic
+%alpha = loqo(sparse(H),f,sparse(Aeq),beq,lb,ub,[],1,1);
+
+alpha=quadprog(H,f,[],[],Aeq,beq,lb,ub,[],options);
+%alpha=qpactx(H,f,[Aeq;Aieq],[beq;-bieq],[],[],[],1,0)% X=qpactx(H,f,A,b,VLB,VUB)
+alpha = alpha (:);
+toc
+%figure(10),plot(sort(alpha)),ylabel('\alpha')
+
+% bepalen van de bias
+%********************
+
+svi=find(abs(alpha)>epsilon);
+aantalsup=length(svi);
+
+if tekstuitvoer
+   fprintf('Support Vectors : %d (%3.1f%%)\n\n',aantalsup,100*aantalsup/N);
+end
+
+%obtaining W
+nfeat=size(Xtotal,1);
+w= zeros(nfeat,1);
+
+for i=1:aantalsup
+    j=svi(i);
+    xi= Xtotal(:,j);
+    yi= Ytotal(j,1);
+    v = alpha(j,1) * xi * yi;
+    w=w+v;
+end
+
+w=w./norm(w);%normalize W;
+
+%obtaining bias
+idx=find(Ytotal(svi)==1);%Find the index of the data points labelled + 
+idx1=find(Ytotal(svi)==-1);
+
+    x1= Xtotal(:,idx);%choosing the positives ones
+    x2= Xtotal(:,idx1);
+  
+%   bias = -1/2*((w' * x1) + (w' * x2))%performing the calculation of the bias
+bias1=zeros(length(idx),1);
+for i=1:length(idx)
+    bias1(i,1)=1-(w' * x1(:,i));
+end
+
+bias2=zeros(length(idx1),1);
+for i=1:length(idx1)
+    bias2(i,1)=-1-(w' * x2(:,i));
+end
+
+biasTemp=[bias1;bias2];
+bias=mean(biasTemp);
+
+% bias=1-(w' * x1)
+% bias2=-1-(w' * x2)
+%bias=bias_B(alpha,K,Xtotal,Ytotal,epsilon);
+eslack=zeros(N,1);
+eslackdumm=eslack_E(w,Xtotal,Ytotal,bias);
+
+
+eslack=eslackdumm(1:N);
+
+if ~Notest
+    eslack2=zeros(M,1);
+    eslack2=eslackdumm(N+1:N+M);
+else
+    eslack2=[];
+end
+
+
+clear H K;
+
+
+%Recopiling the solution...
+solution=cell(1,5);
+solution{1,1}=alpha;
+solution{1,2}=bias;
+solution{1,3}=w;
+solution{1,4}=eslack;
+solution{1,5}=eslack2;
+

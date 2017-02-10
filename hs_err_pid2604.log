@@ -1,0 +1,124 @@
+
+An unexpected exception has been detected in native code outside the VM.
+Unexpected Signal : EXCEPTION_ACCESS_VIOLATION occurred at PC=0x76b51904
+Function name=(N/A)
+Library=C:\WINNT\system32\comdlg32.dll
+
+NOTE: We are unable to locate the function name symbol for the error
+      just occurred. Please refer to release documentation for possible
+      reason and solutions.
+
+
+
+Current Java thread:
+
+Dynamic libraries:
+0x00400000 - 0x005FB000 	E:\MATLAB6p5\bin\win32\matlab.exe
+0x77F80000 - 0x77FFB000 	C:\WINNT\System32\ntdll.dll
+0x77E80000 - 0x77F31000 	C:\WINNT\system32\KERNEL32.dll
+0x77E10000 - 0x77E6F000 	C:\WINNT\system32\USER32.dll
+0x77F40000 - 0x77F79000 	C:\WINNT\system32\GDI32.dll
+0x77A50000 - 0x77B45000 	C:\WINNT\system32\ole32.dll
+0x77D30000 - 0x77DA1000 	C:\WINNT\system32\RPCRT4.DLL
+0x77DB0000 - 0x77E0B000 	C:\WINNT\system32\ADVAPI32.DLL
+0x77820000 - 0x77827000 	C:\WINNT\system32\VERSION.dll
+0x759B0000 - 0x759B6000 	C:\WINNT\system32\LZ32.DLL
+0x7A000000 - 0x7A00D000 	E:\MATLAB6p5\bin\win32\mwoles05.dll
+0x779B0000 - 0x77A4B000 	C:\WINNT\system32\OLEAUT32.dll
+0x7A710000 - 0x7A7D0000 	E:\MATLAB6p5\bin\win32\libut.dll
+0x77920000 - 0x77943000 	C:\WINNT\system32\IMAGEHLP.dll
+0x78000000 - 0x78046000 	C:\WINNT\system32\MSVCRT.DLL
+0x7B110000 - 0x7B138000 	E:\MATLAB6p5\bin\win32\libmx.dll
+0x7AF70000 - 0x7AF77000 	E:\MATLAB6p5\bin\win32\libmex.dll
+0x7AF80000 - 0x7AF93000 	E:\MATLAB6p5\bin\win32\libmwservices.dll
+0x7A630000 - 0x7A644000 	E:\MATLAB6p5\bin\win32\mpath.dll
+0x7A7D0000 - 0x7A895000 	E:\MATLAB6p5\bin\win32\m_interpreter.dll
+0x7AFA0000 - 0x7AFA9000 	E:\MATLAB6p5\bin\win32\libmat.dll
+0x7AAA0000 - 0x7AB2B000 	E:\MATLAB6p5\bin\win32\mlib.dll
+0x7AA90000 - 0x7AA9E000 	E:\MATLAB6p5\bin\win32\m_pcodeio.dll
+0x7AA10000 - 0x7AA73000 	E:\MATLAB6p5\bin\win32\m_ir.dll
+0x7A8A0000 - 0x7AA0F000 	E:\MATLAB6p5\bin\win32\m_parser.dll
+0x7AA80000 - 0x7AA8F000 	E:\MATLAB6p5\bin\win32\m_pcodegen.dll
+0x7AFE0000 - 0x7AFE6000 	E:\MATLAB6p5\bin\win32\m_dispatcher.dll
+0x7A010000 - 0x7A0E8000 	E:\MATLAB6p5\bin\win32\hg.dll
+0x7A5E0000 - 0x7A62F000 	E:\MATLAB6p5\bin\win32\numerics.dll
+0x7AB50000 - 0x7AB5F000 	E:\MATLAB6p5\bin\win32\libmwlapack.dll
+0x7AB60000 - 0x7ABBC000 	E:\MATLAB6p5\bin\win32\libmwfftw.dll
+0x7AFB0000 - 0x7AFDB000 	E:\MATLAB6p5\bin\win32\libmwumfpack.dll
+0x7A650000 - 0x7A6B2000 	E:\MATLAB6p5\bin\win32\udd.dll
+0x7A4F0000 - 0x7A563000 	E:\MATLAB6p5\bin\win32\uiw.dll
+0x77800000 - 0x7781E000 	C:\WINNT\System32\WINSPOOL.DRV
+0x76620000 - 0x76630000 	C:\WINNT\system32\MPR.dll
+0x76B30000 - 0x76B6D000 	C:\WINNT\system32\comdlg32.dll
+0x70BD0000 - 0x70C35000 	C:\WINNT\system32\SHLWAPI.DLL
+0x71710000 - 0x71794000 	C:\WINNT\system32\COMCTL32.DLL
+0x782F0000 - 0x78534000 	C:\WINNT\system32\SHELL32.DLL
+0x7A570000 - 0x7A5D8000 	E:\MATLAB6p5\bin\win32\gui.dll
+0x7A110000 - 0x7A4CD000 	E:\MATLAB6p5\bin\win32\simulink.dll
+0x75E60000 - 0x75E7A000 	C:\WINNT\System32\IMM32.dll
+0x7AFF0000 - 0x7B017000 	E:\MATLAB6p5\bin\win32\libmwbuiltins.dll
+0x7B020000 - 0x7B075000 	E:\MATLAB6p5\bin\win32\cg_ir.dll
+0x7B080000 - 0x7B0A2000 	E:\MATLAB6p5\bin\win32\libfixedpoint.dll
+0x7B0B0000 - 0x7B0B8000 	E:\MATLAB6p5\bin\win32\glee.dll
+0x7B0C0000 - 0x7B0E7000 	E:\MATLAB6p5\bin\win32\jmi.dll
+0x7A0F0000 - 0x7A102000 	E:\MATLAB6p5\bin\win32\dastudio.dll
+0x7A4D0000 - 0x7A4ED000 	E:\MATLAB6p5\bin\win32\hardcopy.dll
+0x7AB30000 - 0x7AB4A000 	E:\MATLAB6p5\bin\win32\sl_solver.dll
+0x79000000 - 0x790F2000 	E:\MATLAB6p5\bin\win32\MFC42.DLL
+0x7B140000 - 0x7B155000 	E:\MATLAB6p5\bin\win32\mclcom.dll
+0x7A6C0000 - 0x7A704000 	E:\MATLAB6p5\bin\win32\udd_mi.dll
+0x7B0F0000 - 0x7B10B000 	E:\MATLAB6p5\bin\win32\comcli.dll
+0x75170000 - 0x751BF000 	C:\WINNT\System32\NETAPI32.dll
+0x77BE0000 - 0x77BEF000 	C:\WINNT\System32\Secur32.dll
+0x751C0000 - 0x751C6000 	C:\WINNT\System32\NETRAP.dll
+0x75150000 - 0x75160000 	C:\WINNT\System32\SAMLIB.dll
+0x75030000 - 0x75043000 	C:\WINNT\System32\WS2_32.dll
+0x75020000 - 0x75028000 	C:\WINNT\System32\WS2HELP.DLL
+0x77950000 - 0x77978000 	C:\WINNT\system32\WLDAP32.dll
+0x77980000 - 0x779A4000 	C:\WINNT\System32\DNSAPI.dll
+0x75050000 - 0x75058000 	C:\WINNT\System32\WSOCK32.dll
+0x7AE30000 - 0x7AF30000 	E:\MATLAB6p5\bin\win32\atlas_PIII.dll
+0x7ABC0000 - 0x7AE26000 	E:\MATLAB6p5\bin\win32\lapack.dll
+0x10000000 - 0x1006E000 	E:\MATLAB6p5\bin\win32\DFORRT.dll
+0x5FD00000 - 0x5FD0E000 	C:\WINNT\System32\MFC42LOC.DLL
+0x6E420000 - 0x6E426000 	C:\WINNT\System32\INDICDLL.dll
+0x6D420000 - 0x6D4EE000 	E:\MATLAB6p5\sys\java\jre\win32\jre\bin\hotspot\jvm.dll
+0x77570000 - 0x775A0000 	C:\WINNT\System32\WINMM.dll
+0x6D220000 - 0x6D227000 	E:\MATLAB6p5\sys\java\jre\win32\jre\bin\hpi.dll
+0x6D3B0000 - 0x6D3BD000 	E:\MATLAB6p5\sys\java\jre\win32\jre\bin\verify.dll
+0x6D250000 - 0x6D266000 	E:\MATLAB6p5\sys\java\jre\win32\jre\bin\java.dll
+0x6D3C0000 - 0x6D3CD000 	E:\MATLAB6p5\sys\java\jre\win32\jre\bin\zip.dll
+0x6D020000 - 0x6D128000 	E:\MATLAB6p5\sys\java\jre\win32\jre\bin\awt.dll
+0x6D1E0000 - 0x6D21B000 	E:\MATLAB6p5\sys\java\jre\win32\jre\bin\fontmanager.dll
+0x0F9F0000 - 0x0FD52000 	C:\WINNT\System32\nvoglnt.dll
+0x7AF50000 - 0x7AF64000 	E:\MATLAB6p5\bin\win32\nativejava.dll
+0x1AB60000 - 0x1AB69000 	E:\MATLAB6p5\bin\win32\nativejmi.dll
+0x1B480000 - 0x1B487000 	C:\Program Files\Yahoo!\Messenger\idle.dll
+0x1B490000 - 0x1B4CD000 	E:\Program Files\Network Associates\VirusScan\Wbhook32.dll
+0x1B5E0000 - 0x1B5EA000 	E:\Program Files\Network Associates\VirusScan\Res0A\WbhkRes.dll
+0x7AF30000 - 0x7AF47000 	E:\MATLAB6p5\bin\win32\glren.dll
+0x69510000 - 0x695D7000 	C:\WINNT\System32\OPENGL32.dll
+0x6FAC0000 - 0x6FADF000 	C:\WINNT\System32\GLU32.dll
+0x51000000 - 0x5104B000 	C:\WINNT\System32\DDRAW.dll
+0x728A0000 - 0x728A6000 	C:\WINNT\System32\DCIMAN32.dll
+0x76020000 - 0x76053000 	C:\WINNT\System32\spool\DRIVERS\W32X86\3\UNIDRVUI.DLL
+0x1DDD0000 - 0x1DDD5000 	E:\MATLAB6p5\toolbox\matlab\datatypes\cellfun.dll
+0x1DDE0000 - 0x1DE74000 	E:\MATLAB6p5\toolbox\matlab\iofun\hdf.dll
+0x1DE80000 - 0x1DF25000 	E:\MATLAB6p5\bin\win32\mwhd413m.dll
+0x1DF30000 - 0x1DF46000 	E:\MATLAB6p5\bin\win32\mwhm413m.dll
+0x775A0000 - 0x77625000 	C:\WINNT\System32\CLBCATQ.DLL
+0x77840000 - 0x7787D000 	C:\WINNT\System32\cscui.dll
+0x770C0000 - 0x770E3000 	C:\WINNT\System32\CSCDLL.DLL
+0x75160000 - 0x7516C000 	C:\WINNT\System32\ntlanman.dll
+0x75210000 - 0x75225000 	C:\WINNT\System32\NETUI0.DLL
+0x751D0000 - 0x75208000 	C:\WINNT\System32\NETUI1.DLL
+0x72A00000 - 0x72A2D000 	C:\WINNT\system32\DBGHELP.dll
+0x690A0000 - 0x690AB000 	C:\WINNT\System32\PSAPI.DLL
+
+Local Time = Sun Mar 09 22:53:48 2003
+Elapsed Time = 1193
+#
+# The exception above was detected in native code outside the VM
+#
+# Java VM: Java HotSpot(TM) Client VM (1.3.1_01 mixed mode)
+#

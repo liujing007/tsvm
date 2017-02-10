@@ -1,0 +1,10 @@
+Ctest=20;
+M=37;
+numPlus=10;
+Cminus=10e-5;
+Cplus=10e-5 * numPlus/M-numPlus;
+
+while ((Cplus < Ctest) || (Cplus < Ctest)),
+    Cminus=Cminus+1
+    Cplus=Cplus+1 
+end
